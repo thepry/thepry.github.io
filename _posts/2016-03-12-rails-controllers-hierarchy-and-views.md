@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Rails controller hierarchy and views"
+title:  "Rails controllers hierarchy and views"
 date:   2016-03-12 4:00
 categories: rails
 permalink: /rails-controllers-hierarchy-and-views
