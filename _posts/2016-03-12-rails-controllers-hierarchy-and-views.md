@@ -6,6 +6,8 @@ categories: rails
 permalink: /rails-controllers-hierarchy-and-views
 ---
 
+# Organizing your controllers
+
 Few weeks ago I found [this](http://jeromedalbert.com/how-dhh-organizes-his-rails-controllers/) post explaining how DHH oranizes controllers in his apps. I also found [this](https://habrahabr.ru/post/136461/)(it's in russian) nice post with a nice example of the controllers hierarchy. The main idea is to organize controllers the same way our website works. For example if there're users on our website and users have posts the controllers structure should be:
 
 ```ruby
