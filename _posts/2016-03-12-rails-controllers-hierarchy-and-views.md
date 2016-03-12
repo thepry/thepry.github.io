@@ -10,7 +10,6 @@ Few weeks ago I found [this](http://jeromedalbert.com/how-dhh-organizes-his-rail
 
 ```ruby
 # config/routes.rb
-
 resources :users do
   scope module: :users do
     resoures :posts
@@ -55,7 +54,9 @@ And do the same thing for `render` inside our views:
   = render partial: 'posts/post', locals: { post: post }
 ```
 
-But that's not a rails way. Instead, we could add some magic:
+# Solution
+
+Instead of specifying each view's path, we could add some magic:
 
 ```ruby
 # app/controllers/users/posts_controller.rb
@@ -82,10 +83,15 @@ module ViewsPath
   end
 end
 
+# app/controllers/application_controller.rb
+class ApplicationController < ActionController::Base
+  extend ViewsPath
+  ...
+end
+
 # app/controllers/users/posts_controller.rb
 module Users
   class PostsController < ApplicationController
-    extend ViewsPath
     add_views_path :posts
   end
 end
