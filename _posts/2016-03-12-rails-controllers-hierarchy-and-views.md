@@ -30,11 +30,11 @@ module Users
 end
 ```
   
-This structure allows us to keep controllers simple and clean, but requires to write extra code.
+This structure allows us to keep controllers simple and clean, but requires to write some extra code.
 
-# Problems
+# Problem
 
-The problem is that even if we organize our controller's modules the same way our routes are, we don't want to use the same structure for views. We want to avoid adding the `views/users/posts` directory for our views and keep them in `views/posts`. Of course it's not a problem, we just need to specify view path explicitly by calling `render` method:
+The problem is that even if we organize our controller's modules the same way our routes are, we don't want to use the same structure for views. We want to avoid adding the `views/users/posts` directory for our views and keep them in `views/posts`. Of course we could just specify the view path explicitly by calling `render` method:
 
 ```ruby
 # app/controllers/users/posts_controller.rb
@@ -47,7 +47,15 @@ module Users
 end
 ```
 
-And do the same thing for `render` inside our views. But that's not a rails way. We should add some magic:
+And do the same thing for `render` inside our views:
+
+```ruby
+# app/views/posts/index.html.slim
+- @posts.each do |post|
+  = render partial: 'posts/post', locals: { post: post }
+```
+
+But that's not a rails way. Instead, we could add some magic:
 
 ```ruby
 # app/controllers/users/posts_controller.rb
@@ -56,6 +64,10 @@ module Users
     before_filter { lookup_context.prefixes << 'posts' }
   end
 end
+
+# app/views/posts/index.html.slim
+- @posts.each do |post|
+  = render partial: 'post', locals: { post: post }
 ```
 
 That's better! At first Rails will try to find `index` at `views/users/posts` path. If it's not found, it will look into `views/posts`. But can we make it prettier? Maybe add some DSL? Sure!
