@@ -12,7 +12,7 @@ I've created gem which allows to add views paths in controller. I wrote about th
 
 So just
 
-```
+```ruby
 # Gemfile
 gem 'rails_views_path'
 
