@@ -98,3 +98,12 @@ module Users
   end
 end
 ```
+
+# Update: Gem
+
+Added [gem](https://github.com/thepry/rails_views_path) that patches your ActionController::Base and allows to use `add_views_path` in yours controllers.
+
+```ruby
+# Gemfile
+gem 'rails_views_path'
+```
