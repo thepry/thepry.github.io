@@ -4,6 +4,7 @@ title:  "Rails views path gem released"
 date:   2016-03-14 0:20
 categories: rails
 permalink: /rails-views-path-gem
+excerpt: I've created gem which allows to add views paths in controller. I wrote about this problem in my previous post...
 ---
 
 # Version 0.1.0

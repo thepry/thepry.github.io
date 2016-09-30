@@ -4,6 +4,7 @@ title:  "Rails controllers hierarchy and views"
 date:   2016-03-12 4:00
 categories: rails
 permalink: /rails-controllers-hierarchy-and-views
+excerpt: Few weeks ago I found post explaining how DHH oranizes controllers in his apps. I also found  nice post with a nice example of the controllers hierarchy. The main idea is to organize controllers the same way our website works...
 ---
 
 # Organizing your controllers
@@ -30,7 +31,7 @@ module Users
   end
 end
 ```
-  
+
 This structure allows us to keep controllers simple and clean, but requires to write some extra code.
 
 # Problem

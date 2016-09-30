@@ -4,6 +4,7 @@ title:  "First Elixir experience"
 date:   2016-08-29 0:20
 categories: elixir
 permalink: /first-elixir-experience
+excerpt: I started working on new project recently, which will require mobile app and some backend for it. I know Rails well enought and obvious choise would be to keep using it. But i wanted to learn something new so i decided to choose some functional language...
 ---
 
 # Why Elixir?
