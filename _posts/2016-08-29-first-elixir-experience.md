@@ -49,7 +49,7 @@ def my_func(value = :default_value) do
 end
 ```
 
-Will not assing `:default_value` to `value` if it's not specified. For default parameter value you have to use `\\`
+Will not assign `:default_value` to `value` if it's not specified. For default parameter value you have to use `\\`
 
 ```elixir
 def my_func(value \\ :default_value) do
