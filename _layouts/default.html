@@ -6,7 +6,9 @@
   <body>
 
     {% include header.html %}
-    {% include yandex_metrika.html %}
+    {% if jekyll.environment == 'production'%}
+      {% include yandex_metrika.html %}
+    {% endif %}
 
     <div class="page-content">
       <div class="wrapper">
