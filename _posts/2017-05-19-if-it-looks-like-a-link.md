@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "If it looks like a link - it should should be a link"
+title:  "If it looks like a link - it should be a link"
 date:   2017-05-19 13:00
 categories: javascript
 permalink: /if-it-looks-like-a-link
